@@ -87,15 +87,11 @@ var Radio = Radio || {};
 Radio.version = 1.1;
 
 var params = PluginManager.parameters('MH_Radio');
-
 Radio.personalRadioSwitch = Number(params['PersonalRadioSwitch'] || 1);
-
 Radio.mapChangeMute = params['MuteOnMapChange'] || true;
-
 Radio.station1Name  =  params['StationName1'] || "My Station 1";
 Radio.station1Playlist = eval(params['StationPlaylist1'] || null);
-
-Radio.station1Volume = 1;
+Radio.station1Volume = params['Station1Volume'] || 1.0;
 Radio.station1Muted = true;
 
 AudioManager._bgmBuffers = [];
@@ -200,7 +196,7 @@ Game_Interpreter.prototype.pluginCommand = function(command, args)
             break;
 
             case 'play':
-                if (args[1] == 1){AudioManager._bgmBuffers[1].volume = 1;
+                if (args[1] == 1){AudioManager._bgmBuffers[1].volume = Radio.station1Volume;
                     Radio.station1Muted = false;}                
             break;
 
