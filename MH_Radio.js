@@ -1,19 +1,14 @@
 //**********************************************************************************
-// MageisHero's Radio
+// Anna's Radio
 // MH_Radio.js
-// Version 2.1
+// Version 1.0
 //**********************************************************************************
 /*:
 **@plugindesc
-*(v2.1) Create a radio that plays in the background until you call a plugin command to hear it! It's always going like a real radio!
-*
-*
-*
-*
-*
+*(v1.0) Create a radio that plays in the background until you call a plugin command to hear it! It's always going like a real radio!
 *
 *@target MV
-*@author MageisHero (AnnaMageis)
+*@author AnnaMageis
 *@url
 *@help
 *
